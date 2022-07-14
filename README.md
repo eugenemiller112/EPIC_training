@@ -1,1 +1,2 @@
-# EPIC_training
+# EPIC Training
+## Following the PDF uploaded to this repository...
