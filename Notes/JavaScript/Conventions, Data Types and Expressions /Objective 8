@@ -1,0 +1,2 @@
+8. (Case Senitivity) Explain what happens when a keyword like "var" is used in a different case, like "VAR"
+All keywords in JavaScript are case sensitive. Using a keyword incorrectly will result in an error.

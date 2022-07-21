@@ -1,0 +1,10 @@
+14. (While Loops) Describe the difference between a while loop and a do-while loop.
+The while loop checks the condition before the first iteration:
+while(false){
+  document.write("I will not execute");
+}
+
+The do-while loop executes the first iteration, then checks the condition:
+do{
+  document.write("I will execute once");
+} while(false);

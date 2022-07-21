@@ -1,0 +1,30 @@
+17. (try-catch-finally) Describe the difference between the try, catch, and finally keywords and explain how they are used.
+All three keywords are used when dealing with errors. Errors are thrown using the following syntax:
+throw new Error("message");
+
+Use try around code that could throw an error, and catch to capture that error and respond to it.
+try{
+  throw new Error("message"):
+}
+catch(error){
+  console.log("There was an error:" + error.message);
+}
+
+If there is code that must run regardless of an error, include it with finally
+try{
+  throw new error("message");
+}
+catch(error){
+  console.log("There was an error:" + error.message);
+}
+finally{
+  console.log("Code that will run"); // this will always run
+}
+
+Note: There are other kinds of errors. Use instanceOf keyword to check for different kinds of errors. Examples include:
+- EvalError
+- RangeError
+- ReferenceError
+- SyntaxError
+- TypeError
+- URIError

@@ -1,0 +1,34 @@
+10. (Boxing) Describe the difference between boxing and unboxing primitives and explain when each occurs.
+
+Boxing is the process of taking a String, Number, or Boolean value and wrapping in an instance of that class.
+Unboxing is the process of extracting the primitive value from the wrapper object, usually by calling the valueOf method.
+
+Example:
+Primitive value: 5
+var boxedNum = new Number(5); // boxing
+var unboxedNum = boxedNum.valueOf(); // unboxing
+
+Primitive value: "test"
+var boxedString = new String("test"); // boxing
+var unboxedString = boxedString.valueOf(); // unboxing
+
+Primitive value: false
+var boxedBoolean = new Boolean(false); // boxing
+var unboxedBoolean = boxedBoolean.valueOf(); // unboxing
+
+
+Boxing never happens without explicitly declaring a new instance of a String, Number, or Boolean value.
+Unboxing will happen automatically in some cases but not in others.
+
+Example:
+Automatic:
+var boxedNum = new Number(5); // boxing
+var newNum = boxedNum + 5; // results in 10
+
+Not Automatic:
+var boxedBoolean = new Boolean(false); // boxing
+if (boxedBoolean) { console.log("true") }; // results in "true"
+if (boxedBoolean.valueOf()) { console.log("true") }; // does not result in true
+
+Note that in the first non-automatic example, the output will always be true, because boxedBoolean is a non-null, non-undefined object.
+Because unboxing is inconsistent, Epic convention is to never box primitve values.

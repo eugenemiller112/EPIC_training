@@ -1,0 +1,18 @@
+12. (Equal vs. Identical) Describe the difference between the ==, ===, != and !== operators.
+The operators "is equal to" (==) and "is not equal to" (!=) will perform conversion before checking equivalence.
+The operators "is identical to" (===) and "is not identical to" (!==) will not convert before checking equivalence.
+
+Example:
+5==5; // true
+5=="5"; // true
+
+5!=5; // false
+5!="5"; // false
+
+5===5; // true
+5==="5"; // false
+
+5!==5; // false
+5!=="5"; // true
+
+Because the conversion rules for = and != are complex and non-intuitive. Epic convention is to always use === and !==. 

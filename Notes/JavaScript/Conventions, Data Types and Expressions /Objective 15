@@ -1,0 +1,46 @@
+15. (Conditionals) Describe the difference between an if-else block and a switch-case block and explain why you would use one over the other.
+
+In addition to syntax differences, switch-case blocks are better in terms of clarity and performance, when the set of checks can be reduced to comparing one condition against a discrete set of constant variables.
+When conditions are not constants, the if-else structure is the only option. In the following examples, switch-case is better.
+
+Example:
+Swich-case:
+
+function getUrl(selectionString){
+  switch(selectionString){
+    case "userweb":
+      return "http://userweb.epic.com";
+      break;
+    case "brainbow":
+      return "http://brainbow.com";
+      break;
+    case "home":
+    case "guru":
+      return "http://guru/"
+      break;
+    default:
+      return "http://www.epic.com";
+      break;
+    }
+}
+
+If-else example:
+
+function getUrl(selectionString){
+  if (selectionString == "userweb")
+  {
+    return "http://userweb.epic.com"
+  }
+  else if (selectionString=="brainbow")
+  {
+    return "http://brainbow.com"
+  }
+  else if (selectionString=="home" || selectionString=="guru")
+  {
+    return "http://guru/"
+  }
+  else
+  {
+    return "http://www.epic.com"
+  }
+}

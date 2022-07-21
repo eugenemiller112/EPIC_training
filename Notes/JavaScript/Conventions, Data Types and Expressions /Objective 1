@@ -6,7 +6,7 @@ Boolean
 - true or false
 
 Number (decimal, hexidecimal, exponential)
-- 0x##, 0xFF (hexidecimal)
+- 0x##, 0xFF (hexidecimal)  (recall that A=10, B=11, ... to convert A5 to decimal, 10*16^1 + 5*16^0 = 165)
 - #e#, 4.18e10 (exponential)
 -  NaN, Infinity (not a number, positive infinity)
 

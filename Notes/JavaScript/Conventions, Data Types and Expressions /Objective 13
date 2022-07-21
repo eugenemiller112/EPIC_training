@@ -1,0 +1,11 @@
+13. (Concatenation) Explain what happens when you use the "+" and "+=" operators with strings.
+When the "+" operator is used with either a string as either operand, both operands will be converted to a string and concatenated together.
+
+Example:
+"abc" + 123; // result: "abc123"
+"abc" + true; // result: "abctrue"
+"abc" + null; // result: "abcnull"
+"abc" + undefined; // result: "abcundefined"
+"abc" + {}; // result: "abc[object Object]"
+
+The add assign operator "+=" also concatenates, but additionally assigns the result to the left hand operand.

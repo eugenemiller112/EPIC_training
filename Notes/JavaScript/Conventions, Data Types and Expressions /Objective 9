@@ -1,0 +1,8 @@
+9. (Numeric Relational Operators) Explain what happens when a string and number are compared using a relational operator.
+The string will be converted to a number before comparison. If the string is non-numeric the conversion will result in NaN and the comparison will always be false.
+
+Examples:
+5 < "1"; // (5<1) result: false
+5 > "1"; // (5>1) result: true
+5 < "a"; // (5<NaN) result: false
+5 > "a"; // (5>NaN) result: false

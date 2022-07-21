@@ -1,0 +1,5 @@
+16. (Undefined) Explain what happens when an undeclared or uninitialized variable is used in an expression.
+An error is thrown.
+Example:
+var a = 1, b = a + c; // c is undeclared and not initialized, so an error is thrown
+var c, a = 1, b = a + c; // c is declared, error is not thrown, but b is NaN because c is undefined.
