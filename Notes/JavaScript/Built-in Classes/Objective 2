@@ -1,0 +1,102 @@
+2. (Array Methods) Explain how various array methods are used such as: concat, join, pop, push, reverse, slice, sort, splice, and toString
+
+Certain methods modify the array (pop, push, sort, splice, reverse), while others return a new array (concat, slice) or a string representation of the array (join, toString) without modifying the original array.
+
+Methods that modify the original Array:
+
+
+pop() // removes an element from the end of the array and returns the element
+Example:
+var arr = ["a", "b", "c", 1, 2, 3];
+arr.pop(); // returns 3
+arr.pop(); // returns 2
+arr.pop(); // returns 1
+
+
+push(element) // adds an element to the end of the array and returns the new length
+Example:
+var arr = [];
+arr.push("e"); // returns 1
+arr.push("b"); // returns 2
+arr.push(1); // returns 3
+arr.push({prop:val}); // returns 4
+
+
+sort(function) // sorts array in string order (unless a sort function is provided) and returns a reference to the array.
+Example:
+var sortOrder={
+  string: function(a,b){
+    return String(a).localCompare(String(b));
+  },
+  reverseString: function(a,b){
+    return String(a).localCompare(String(b)) * -1;
+  },
+  number: function(a,b){
+    return a-b;
+  },
+  reverseNumber: function(a,b){
+    return b-a;
+  }
+}
+
+var arr = [2, 12, 1];
+arr.sort(sortOrder.string); // result: [1, 12, 2]
+arr.sort(sortOrder.reverseString); // result: [2, 12, 1]
+arr.sort(sortOrder.number); // result: [1, 2, 12]
+arr.sort(sortOrder.reverseNumber); // result: [12, 2, 1]
+arr.sort(); // same as arr.sort(sortOrder.string)
+
+
+splice(index, howMany, item1, ..., itemN) // Add/removes items to/from an array and returns the removed items.
+  index - (required) an integer that specifies which index to add/remove items. Use negative values to specify places at the end of the array.
+  howMany - (required) the number of items to be removed, if set to 0, no items removed.
+  item1, ..., itemN - (optional) new items to be added to the array
+
+Example:
+var chars = ["B", "O", "A", "M"];
+chars.splice(2, 0, "L", "K"); // returns [], chars = ["B", "O", "L", "K", "A", "M"]
+chars.splice(0, 1); // returns ["B"], chars = ["O", "L", "K", "A", "M"]
+chars.splice(3,2,"B"); // returns ["A", "M"], chars = ["O", "L", "K", "B"]
+
+
+reverse() // flips the order of elements in the array and returns a reference to the array
+
+Example:
+var arr = [1, 2, 3];
+arr.reverse(); // arr = [3, 2, 1]
+
+
+Methods that do not modify the original array:
+These methods create a new array and return a reference to it.
+
+
+concat(array1, ..., arrayN) // Combines two or more arrays
+
+Example:
+var arr1 = [1, 2, 3], arr2 = ["a", "b", "c"], arr3 = ["d"];
+var arr4 = arr1.concat(arr2, arr3); // [1, 2, 3, "a", "b", "c", "d"]
+
+
+slice(start, end) // selects elements from an array including start but not including end
+
+Example:
+var arr = [1, 2, 3, 4, 5];
+var arr2 = arr.slice(2,4); // arr2 = [3,4]
+
+
+These methods return a single string that represents the current state of the array.
+
+
+join(delimiter) // combined elements of the array using the delimiter string. If not delimiter provided, comma is used.
+
+Example:
+var arr = ["a", "b", "c"];
+arr.join(); // returns "a,b,c"
+arr.join(", "); // returns "a, b, c"
+
+
+toString() // same as join with no arguments
+
+Example:
+var arr = ["a", "b", "c"];
+arr.toString(); // returns "a,b,c"

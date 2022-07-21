@@ -1,0 +1,16 @@
+1. (Date) Describe the difference between the different date piecing methods: getDate, getDay, getMonth, getYear
+
+A date represents the number of milliseconds since midnight (UTC) on 1/1/1970.
+To piece a date, use the following methods.
+In each case, if UTC is omitted, local time zone is used.
+
+aDate.get[UTC]FullYear() // returns four digit year
+aDate.get[UTC]Month() // returns 0 (Jan) to 11 (Dec)
+aDate.get[UTC]Date() // returns day of month (1 to 31)
+aDate.get[UTC]Day() // returns 0 (Sunday) to 6 (Saturday)
+aDate.get[UTC]Hours() // returns 0 to 23
+aDate.get[UTC]Minutes() // returns 0 to 59
+aDate.get[UTC]Seconds() // returns 0 to 59
+aDate.get[UTC]Milliseconds() // returns 0 to 999
+
+Note: all these methods begin at 0 except for get[UTC]Date (1 to 31) and get[UTC]Year (which can be negative).
