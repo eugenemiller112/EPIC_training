@@ -3,6 +3,6 @@ The best way to perform this is using the isFinite function.
 
 Example:
 isFinite(+"5"); // converts to Number, then outputs true
-isFinite(+"abc"); // converts to NaN, the outputs false
+isFinite(+"abc"); // converts to NaN, then outputs false
 isFinite(5/0); // evaluates as Infinity, then outputs false
 isFinite(-5/0); // evaluates as -Infinity, then outputs false

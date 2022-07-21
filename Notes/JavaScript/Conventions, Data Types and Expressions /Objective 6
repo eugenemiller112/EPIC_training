@@ -1,4 +1,4 @@
-6. (Boolean Operators) Describe the difference between logical AND and OR and describe examples their output.
+6. (Boolean Operators) Describe the difference between logical AND and OR and describe examples of their output.
 Unlike most languages, the result of logical AND/OR operators is not always true or false:
 
 A = B || C; // A is assigned B if B is true when converted to boolean. Otherwise A is assigned to C.

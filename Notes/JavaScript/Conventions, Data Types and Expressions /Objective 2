@@ -9,7 +9,7 @@ Number to String
 String to Number
 - n = s - 0;
 - n = +s;
-- n = number(s); // base 10 number, whitespace okay
+- n = Number(s); // base 10 number, whitespace okay
 - n = parseInt(s, base); // Parse integer using base
 - n = parseFloat(s); // Parse from beginning of string
   Note: strings that cannot be converted to numbers will result in NaN
@@ -23,7 +23,7 @@ From Boolean
     - number: 0
 
 To Boolean
-Boolean(x) of !!x
+Boolean(x) or !!x
 - number
   - x is 0 or NaN, false
   - otherwise: true

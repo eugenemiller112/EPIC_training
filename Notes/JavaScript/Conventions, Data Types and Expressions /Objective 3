@@ -53,7 +53,7 @@ delete
 >= // greater than or equal to
 
 /* true if object is an instance of a class */
-object instanceof class
+object instanceOf class
 
 /* true if object or its prototype contain a property */
 property in object
@@ -87,9 +87,9 @@ a?b:c // If a, then return b, else return c
 *= // multiply and assign
 /= // divide and assign
 %= // modulus and assign
-^ // bitwise XOR and assign
+^= // bitwise XOR and assign
 += // add and assign
-- // subtract and assign
+-= // subtract and assign
 
 1 - Multiple eval
 /* Evaluates exp1, then exp2 */

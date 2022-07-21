@@ -17,7 +17,7 @@ alertTheVariable(); // Displays "test" in an alert group
 
 
 Declaring a variable without initializing it:
-In the case, a variable will be local if declared in a function, and global if declared outside a function. Its value is undefined until initialized.
+In this case, a variable will be local if declared in a function, and global if declared outside a function. Its value is undefined until initialized.
 
 var globalVar;
 

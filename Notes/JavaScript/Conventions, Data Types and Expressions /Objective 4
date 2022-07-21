@@ -11,7 +11,7 @@ Number
 "String:" + new Number(123); // result = "String: 123"
 
 Boolean
-"String:"" + new Boolean(false); // result = "String: false"
+"String:" + new Boolean(false); // result = "String: false"
 
 However, for custom objects and instances of custom classes, the default toString method for an object will be called, unless explicity overriden by the object or class
 
