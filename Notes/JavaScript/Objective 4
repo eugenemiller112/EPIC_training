@@ -1,0 +1,33 @@
+4. (Objects to strings) Explain what happens when an object is converted to a string.
+For most built-in classes, a reasonable string conversion will take place.
+
+Array
+  "String:" + ["a", "b", "c"]; // result = "String: a, b, c"
+
+String
+"String:" + new String("abc"); // result = "String: abc"
+
+Number
+"String:" + new Number(123); // result = "String: 123"
+
+Boolean
+"String:"" + new Boolean(false); // result = "String: false"
+
+However, for custom objects and instances of custom classes, the default toString method for an object will be called, unless explicity overriden by the object or class
+
+Default object toString
+"String:" + {}; // result "String: [object Object]"
+
+Object overriding toString
+"String:" + {toString:function(){return "hello world"}}; "String: hello world"
+
+Class overriding toString
+var MyClass = function() {};
+
+MyClass.prototype = {
+toString: function() {
+return "hello world";
+}
+};
+
+"String:" + new MyClass() // result: "String: hello world"

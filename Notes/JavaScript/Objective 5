@@ -1,0 +1,21 @@
+5. (Assignment Operators) Describe the difference between an operator, and an operator-assignment
+Operators:
++ // add
+- // subtract
+* // multiply
+/ // divide
+% // modulo
+^ // bitwise XOR
+
+Operator-Assignment:
++= // add and assign
+-= // subtract and assign
+*= // multiply and assign
+/= // divide and assign
+%= // modulo and assign
+^= // bitwise XOR and assign
+
+An operator assignment performs both the operator and the assignment. For example
+a = a + b;
+Is equivalent to
+a += b;

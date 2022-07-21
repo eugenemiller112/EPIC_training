@@ -1,0 +1,35 @@
+7. (Initializing and Declaring Variables) Describe the difference between initializing a variable without declaring it, and declaring a variable without initializing it.
+
+Initialize a variable without declaring it:
+In this case, the variable globalVar will become globally available as soon as initializeWithoutDeclaring is executed.
+
+function initializeWithoutDeclaring()
+{
+  globalVar = "test"; // notice the var keyword is missing
+}
+
+function alertTheVariable(){
+  alert(globalVar);
+}
+initializeWithoutDeclaring(); // initialize globalVar
+alertTheVariable(); // Displays "test" in an alert group
+
+
+
+Declaring a variable without initializing it:
+In the case, a variable will be local if declared in a function, and global if declared outside a function. Its value is undefined until initialized.
+
+var globalVar;
+
+function test(){
+  var localVar;
+  alert(localVar);
+  localVar = "local";
+  alert(localVar);
+}
+
+alert(globalVar); // displays "undefined"
+globalVar = "global";
+alert(globalVar); // displays "global"
+test(); // Displays "undefined" followed by "local"
+alert(localVar + "test"); // produces an error

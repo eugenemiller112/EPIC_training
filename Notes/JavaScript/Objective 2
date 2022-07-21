@@ -1,0 +1,38 @@
+2. (Type Conversion) Explain how one JavaScript type can be converted to another.
+
+Number to String
+- s = n + "";
+- s = string(n);
+- s = n.toString(); // base 10
+- s = n.toString(base); // given base
+
+String to Number
+- n = s - 0;
+- n = +s;
+- n = number(s); // base 10 number, whitespace okay
+- n = parseInt(s, base); // Parse integer using base
+- n = parseFloat(s); // Parse from beginning of string
+  Note: strings that cannot be converted to numbers will result in NaN
+
+From Boolean
+  - true
+    - string: "true"
+    - number: 1
+  - false
+    - string: "false"
+    - number: 0
+
+To Boolean
+Boolean(x) of !!x
+- number
+  - x is 0 or NaN, false
+  - otherwise: true
+- string
+  - x is an empty string: false
+  - otherwise: true
+- Object, function, or array
+  - x is null or undefined: false
+  - otherwise: true
+
+When null is converted to a number, the result is 0.
+When undefined is converted to a number, the result is NaN.

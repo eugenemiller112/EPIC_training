@@ -1,0 +1,96 @@
+3. (Operators) List the JavaScript operators and the order they execute within an expression.
+Objective Details: Javascript operators are evaluated from highest level to lowest level. Operators in the same level are evaluated from left to right.
+
+15 - object manipulation
+/* Creates an object from the listed class */
+new class
+
+/* Access a defined property within the object */
+object.property
+
+/* Access a variable property within the object */
+object[property]
+
+/* invoke a function */
+function()
+
+14 - Unary
+++ // increment
+-- // decrement
++ // convert to a number
+- // convert to a number and invert the sign
+~ // bitwise not
+! // boolean not
+
+/* Returns a string of a variables type */
+typeof
+
+/* Use when invoking a function to discard the returned value */
+void
+
+/* Removes a property or object from a function */
+delete
+
+
+13 - Multiplicative
+* // Multiply
+/ // divide
+% // modulus
+
+12 - Additive
+- // subtraction
++ // addition
+
+11 - bit shift
+<< // bit shift left
+>> // bit shift right, preserve sign
+>>> // bit shift right
+
+10 - relational
+< // less than
+> // greater than
+<= // less than or equal to
+>= // greater than or equal to
+
+/* true if object is an instance of a class */
+object instanceof class
+
+/* true if object or its prototype contain a property */
+property in object
+
+9 - equality
+== // Is equal to
+!= // Is not equal to
+=== // is identical to
+!== // is not identical to
+
+8 - Bitwise AND
+&
+
+7 - Bitwise XOR
+^
+
+6 - Bitwise OR
+|
+
+5 - Logical AND
+&&
+
+4 - Logical OR
+||
+
+3 - Conditional Operator
+a?b:c // If a, then return b, else return c
+
+2 - Assignment
+= // Assignment
+*= // multiply and assign
+/= // divide and assign
+%= // modulus and assign
+^ // bitwise XOR and assign
++= // add and assign
+- // subtract and assign
+
+1 - Multiple eval
+/* Evaluates exp1, then exp2 */
+exp1, exp2

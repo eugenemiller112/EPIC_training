@@ -1,0 +1,13 @@
+6. (Boolean Operators) Describe the difference between logical AND and OR and describe examples their output.
+Unlike most languages, the result of logical AND/OR operators is not always true or false:
+
+A = B || C; // A is assigned B if B is true when converted to boolean. Otherwise A is assigned to C.
+A = B && C; // A is assigned to B if B is false when converted to boolean. Otherwise A is assigned to C.
+
+As A always takes on the value of B or C, there are some interesting examples
+console.log("abc" || "123"); // results in "abc"
+console.log("abc" && "123"); // results in "123"
+
+One situation where a logical operator can come in handy, is if you want to initialize a variable only if it has not already been initialized.
+var myVar = myVar || {};
+In this example myVar will be assigned back to itself if not a null object, otherwise it will be initialized to a new object.

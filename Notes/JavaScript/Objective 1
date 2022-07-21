@@ -1,1 +1,41 @@
 1. (Data Types) List the built-in data types of JavaScript. Next, describe the difference between weak and strong typing, specify which JavaScript uses.
+
+Data Types:
+
+Boolean
+- true or false
+
+Number (decimal, hexidecimal, exponential)
+- 0x##, 0xFF (hexidecimal)
+- #e#, 4.18e10 (exponential)
+-  NaN, Infinity (not a number, positive infinity)
+
+String (use escape \ for special characters)
+- \' single quote
+- \" double quote
+- \\ backslash
+- \n new line
+- \t tab
+- \x## Latin-1 character (## in hex)
+- \u#### Unicode-1 character (#### in hex)
+
+Object (unordered collection key/value pairs)
+- Key is a string or number
+  - key is also referred to as property
+- Value can be any data type
+- {} is an empty object
+- null is a special object indicating no value
+- Example:(name: "John Doe", id: 12345)
+
+Function (like an object but also contains a collection of executible code)
+- () operator that executes the code
+
+Array (A special object that contains an ordered collection of key/value pairs)
+- Key is an integer starting at 0
+- [] is an empty Array
+- Example: ["a", "b", "c", 123]
+
+Undefined (Data type of uninitialized variables)
+- Different from null (must assign null)
+
+Weak typing (used by JavaScript) means that a variable can contain any type of data. Strong typing means a variable can only contain one type of data.
