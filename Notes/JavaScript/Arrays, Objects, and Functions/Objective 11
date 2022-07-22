@@ -1,0 +1,39 @@
+11. (Object literals) Describe what an object literal is and how it is used.
+
+An object literal is a shorthand to describe an object in JavaScript.
+The basic syntax for an object literal is:
+
+{key1:val1, key2:val2, ... , keyN:valN}
+
+Where key is any legal identifier that is unique within the object, and value is any valid JavaScript value (including any object literal).
+If quotes are placed around the key, then the key can be any unique string.
+
+{"key one":val1, "key two":val2, ... , "key eN":valN}
+
+Object literals are the preferred way to define and initialize objects, because they are concise and easy to read.
+
+For example:
+  var myObject = new Object();
+  myObject["property 1"] = 1;
+  myObject.prop2 = 2;
+  myObject.func1 = function() { alert("function 1"); };
+  myObject.array1 = new Array("a", "b", "c");
+
+Can be written:
+
+var myObject = {
+  "property 1":1,
+  prop2 = 2,
+  func1 = function() { alert("function1"); },
+  array1 = ["a", "b", "c"]
+}
+
+Object literals are commonly used for the following tasks;
+- Defining class prototypes.
+- Creating one-off, classless objects.
+
+JavaScript object notation (JSON) is a subset of object literals used for data exchange.
+JSON requires that properties are enclosed in quotes and that functions are disallowed as values.
+
+- JSON is a commonly used by RESTful web service instead of XML because it is more concise.
+- Both Microsoft's DataMember and Epic's DataSynchronizationMember use JSON for web-server-to-client communication.
