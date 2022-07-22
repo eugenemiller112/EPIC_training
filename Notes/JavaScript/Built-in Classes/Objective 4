@@ -1,0 +1,21 @@
+4. (Math) Describe the kinds of methods available in the Math object.
+Math contains properties for mathematical constants as well as static functions for mathematical functions.
+Math is an object not a class, so it has no constructor.
+
+Math Constants:
+  Math.E; // base of natural logarithm
+  Math.PI; // ratio between circumference and diameter of circle.
+
+
+Math Functions:
+  Math.abs(n); // the absolute value of number n
+  Math.ceil(n); // the ceiling (round up) of a number n
+  Math.floor(n); // the floor (round down) of a number n
+  Math.exp(n); // computes a power of e
+  Math.log(n); // computes the natural logarithm of n
+  Math.max(x,y); // returns the maximum of x and y (can include more args)
+  Math.min(x,y); // returns the minimum of x and y (can include more args)
+  Math.pow(x,y); // returns x^y
+  Math.random(); // computes a random number [0,1)
+  Math.round(n); // rounds n to the nearest integer
+  Math.sqrt(n); // computes a square root

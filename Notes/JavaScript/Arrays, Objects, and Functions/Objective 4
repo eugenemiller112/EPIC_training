@@ -1,0 +1,10 @@
+4. (new Array vs Square-Bracket Notation) Describe the difference between creating a new array using the keyword vs. using square brackets.
+
+The only difference is superficial-the syntax between the two techniques:
+
+var arr1 = new Array(1,2,3);
+var arr2 = [1,2,3];
+arr1 instanceof Array; // true
+arr2 instanceof Array; // true
+
+By convention, Epic prefers the bracket notation because it's more concise.

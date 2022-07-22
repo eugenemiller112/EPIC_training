@@ -1,0 +1,10 @@
+6. (for-in loops) Explain how the value in object properties can be accessed using a for-in loop.
+
+For-in loops return the properties defined in an object. To get the values, use square brackets.
+
+Example:
+var obj = {a:1, b:2, c:3};
+for(prop in obj){
+  value = obj[prop];
+  console.log(value);
+}

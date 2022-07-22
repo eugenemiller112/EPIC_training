@@ -1,0 +1,22 @@
+5. (property deletion) Explain what happens when a property is deleted from an object.
+
+The property is completely removed from the object. When trying to access the property that was deleted, undefined will be returned.
+This is the same as if the property was never in the object.
+
+Example:
+function showProperties(obj){
+  var str = "{"
+  for(prop in obj){
+    str += prop + ":" + obj[prop] + ",";
+  }
+  return str.length ==1?"}":str.substring(0,str.length-1)+"}";
+}
+
+var obj = {a:1, b:2, c:3};
+showProperties(obj); // "{a:1,b:2,c:3}"
+"b" in obj; // true
+delete obj.b;
+showProperties(obj); // "{a:1,c:3}"
+"b" in obj; // false
+typeof obj.b; // "undefined"
+typeof obj.r; // "undefined"

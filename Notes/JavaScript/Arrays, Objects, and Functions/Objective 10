@@ -1,0 +1,31 @@
+10. (Closure context) Explain what happens when a variable that is part of a closure's context is modified.
+
+The context of a closure can only be modified by the function creating the closure before its returned, or from within the closure code itself, at least with value types.
+Any changes made to the context variables will be remembered by the closure the next time it is called.
+
+Example:
+  function createIncrementStartingAt(a){
+   ///<summary>This is a non-closure function that returns a closure function </summary>
+   var result = function() {return a++;}
+   a++; // increment before returning closure.
+   return result;
+  }
+
+  var incrementer = createIncrementStartingAt(5);
+  incrementer(); // returns 6
+  incrementer(); // returns 7
+  incrementer(); // returns 8
+
+You can still access reference types that are included in a closure's context, provided you have a local copy of the reference.
+
+Example:
+  function createIncrementStartingAt(a){
+    ///<summary>This is a non-closure function that returns a closure function</summary>
+    return function(){return a.num++};
+  }
+
+  var args = {num:5};
+  var incrementer = new createIncrementStartingAt(args);
+  incrementer(); // returns 5
+  args.num = 10;
+  incrementer(); // returns 10

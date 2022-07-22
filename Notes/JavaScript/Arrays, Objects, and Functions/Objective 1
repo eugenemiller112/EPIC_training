@@ -1,0 +1,24 @@
+1. (length property) Describe the difference between the length property of arrays and functions.
+
+Arrays:
+  With arrays, the length property describes the number of elements in the array, and is adjusted as objects are added/subtracted from and array.
+  It does not affect the values in the array, only the position of the maximum value.
+  Also, the length property can be set to adjust the elements contained in an array
+
+  Example:
+    var arr = [1, 2, 3]; // [1, 2, 3]  arr.length = 3
+    delete arr[2]; // [1, 2, ]  arr.length = 2
+    arr[5] = "test"; // [1, 2, , , , "test"]  arr.length = 6
+    arr.length = 2; // [1, 2] arr.length = 2
+
+
+Functions:
+  With functions, the length property represents the number of named parameters.
+
+  Example:
+    var myFunction = function(a,b,c){}; // myFunction.length = 3
+
+  Setting the length of a function has no effect
+
+  Note: remember that you can pass more arguements than parameters to a function.
+  Additional arguements can be accessed through the arguements array.

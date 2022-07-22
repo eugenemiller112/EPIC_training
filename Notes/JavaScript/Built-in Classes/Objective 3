@@ -1,0 +1,42 @@
+3. (String methods) Explain how various string methods are used, including indexOf, substring, and split.
+
+indexOf(substring, start)
+  Locates the first occurence of a substring in a string
+    - substring: string to look for in string
+    - start: index to start looking at (optional)
+
+    Example:
+    var str="This is a string";
+    var pos = str.indexOf("is"); // returns 2
+    var pos = str.indexOf("is", 3); // returns 5
+
+
+substring(start, end)
+  Return a substring starting from start and ending but not including end.
+    - start: Number where to start looking.
+    - stop: Number where to stop looking (optional).
+
+  Notes:
+    - If end not specified, the entire remaining string is returned.
+    - A negative start or end is treated as 0.
+    - If start>end, values are swapped.
+
+  Example:
+    var str="This is a string";
+    str.substring(1); // returns "his is a string"
+    str.substring(0,4); // returns "This"
+    str.substring(4,0); // returns "This"
+    str.substring(1,-4); // returns "T"
+
+
+split(delimiter, limit)
+  Splits a string at a delimiter into an array of strings, with a maximum number of elements equal to the limit.
+    - delimiter: string to split at
+    - limit: max length of the array (optional)
+
+  Example:
+    var str="This is a string";
+    str.split(" "); // returns ["This", "is", "a", "string"]
+    str.split(" ",2); // returns ["This", "is"]
+
+    

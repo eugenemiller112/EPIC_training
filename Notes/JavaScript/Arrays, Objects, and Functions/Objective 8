@@ -1,0 +1,25 @@
+8. (Anonymous Functions) Explain how you can create an anonymous function to be used immediately or stored for later use.
+
+Functions are defined using the "function" keyword which has the following syntax:
+
+function Name(parameters){
+  //body
+}
+
+Name(arguements); // calling the function
+
+To create an anonymous function, simply omit the name.
+To call the function, place the entire function in parenthesis, and then follow it with the function invoction operator, which also uses parenthesis.
+
+(function(parameters)
+{
+  // body
+})(arguements);
+
+To save the anonymous function for later use, store it in a variable
+
+var func = function(parameters){
+  //body
+};
+
+func(arguements);

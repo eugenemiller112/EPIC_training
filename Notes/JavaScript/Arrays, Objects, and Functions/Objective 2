@@ -1,0 +1,23 @@
+2. (typeof vs instanceof) Describe the difference between the typeof and instanceof keywords.
+
+typeof is a unary operator the returns a string representation of the primitive JavaScript type of a value.
+The only possible results are "number", "string", "boolean", "object", "function", and "undefined".
+
+Example:
+  typeof 1; // returns "number"
+  typeof "hello world"; // returns "string"
+  typeof "true"; // returns boolean
+  typeof {}; // returns "object"
+  typeof var myFunction = function(a,b,c){}; // returns "function"
+  typeof null; // returns "object"
+  typeof undefined; // returns "undefined"
+
+On the other hand, instanceof is an operator with two operands that returns a boolean.
+The result is true if the left-hand object is an object created from the constructor function on the right-hand side.
+
+Example:
+  1 instanceof Number; // returns false
+  new Number(1) instanceof Number; // returns true
+  "test" instanceof String; // returns false
+  new String("test") instanceof String; // returns true
+  [] instanceof Array; // returns true

@@ -1,0 +1,17 @@
+7. (in vs. hasOwnProperty) Describe the difference between "in" and "hasOwnProperty"
+
+The in operator does not distinguish between a property stored directly in an object and a property from the object's prototype.
+
+Example:
+  var myClass = function() {};
+  myClass.prototype = {prop1:1};
+  var myObject = new myClass;
+  myObject.prop2 = 2;
+  "prop1" in myObject; // true
+  "prop2" in myObject; // true
+
+On the other hand, hasOwnProperty only returns true for properties directly in the object.
+
+Example:
+  myObject.hasOwnProperty("prop1"); // false
+  myObject.hasOwnProperty("prop2"); // true

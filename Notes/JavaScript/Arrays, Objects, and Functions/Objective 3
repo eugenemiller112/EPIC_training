@@ -1,0 +1,24 @@
+3. (array vs object) Describe the difference between an array and an object.
+
+An array is, in fact, an object.
+
+typeof {}; // returns "object"
+typeof []; // returns "object"
+
+They both can contain arbitrary key-value pairs.
+
+function showProperties(obj){
+  var str = "{";
+  for(propr in obj){
+    str += prop + ":" + obj[prop] + ", ";
+  }
+  return str.length === 1?"{}":str.substring(0, str.length-1)+ "}";
+}
+
+var myObject = {0:"a", 1:"b", 2:"c", prop:"val"};
+var myArray = ["a", "b", "c"];
+myArray.prop = "val";
+showProperties(myObject); // "{0:a,1:b,2:c,prop:val}"
+showProperties(myArray); // "{0:a,1:b,2:c,prop:val}"
+
+The differences include the methods added by the array class, as well as the special handling of array length. 
