@@ -1,0 +1,7 @@
+12. Describe the syntax for declaring an object type, including optional properties and index members.
+
+It is possible to declare a variable that must conform to a specified object shape, including optional properties.
+Only objects matching this object shape can then be assigned to that variable.
+To permit properties beyond those allowed when the variable was declared, you may declare an index member, specifying its name, index type, and value type.
+(The index type and value type must allow for all other existing properties in the object)
+Any excess properties matching the index type and value type can then be included in the object assigned to the variable. 

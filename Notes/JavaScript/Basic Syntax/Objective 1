@@ -1,0 +1,23 @@
+1. Describe the format of TypeScript comments and how they differ from JavaScript comments.
+
+Similarities:
+Both JavaScript and type script support single line and block comments.
+// single-line
+/* block comment */
+
+Differences:
+They differ in how API documentation is done.
+
+JavaScript uses XML comments like:
+function myFunction(paramName) {
+  ///<summary>Description of the function</summary>
+}
+
+TypeScript uses JSDoc-style comments like:
+/**
+* Description of the method or function
+* @param paramName This is a parameter description
+*/
+function myFunction(paramName:any):void
+{
+}

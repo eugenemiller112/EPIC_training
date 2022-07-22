@@ -1,0 +1,9 @@
+3. Describe the kinds of TypeScript features that may be included in HyperspaceWeb code.
+
+There are three kinds of advanced TypeScript features:
+- Approved
+- Not Approved
+- Not Evaluated
+
+You should not use any language features not explicitly Approved.
+If a new feature is not listed in any of these categories, assume it has not been evaluated yet. 

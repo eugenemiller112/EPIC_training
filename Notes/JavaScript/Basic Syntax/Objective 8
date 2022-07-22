@@ -1,0 +1,6 @@
+8. Describe syntax for declaring a constant and the limitations on variables declared this way.
+
+Constants in TypeScript are very similar to those in C# and are declared with the const keyword.
+The value of a constant must be declared when the variable is declared (though the value can be computed at run-time).
+Once declared, the value of a constant cannot be changed.
+If the value of a constant is a reference type, like Object or Function, its properties can still be changed.

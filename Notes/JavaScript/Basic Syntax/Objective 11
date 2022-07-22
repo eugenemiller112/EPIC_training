@@ -1,0 +1,31 @@
+11. Explain how a type guard behaves when it can definitively determine a union variable's type versus when it can't.
+
+Assume you have if-else branches that depend on a union variables type:
+var myVar: string | number;
+if (typeof myVar == "string"){
+  console.log(myVar.CharAr(0));
+}
+else {
+  console.log(myVar.toExponential());
+}
+
+If the variable is set to a constant, the type guard can determine the code path at compile time and alert you to any code that is unreachable.
+var myVar: string | number = "This is a string";
+if (typeof myVar == "string"){
+  console.log(myVar.CharAr(0));
+}
+else {
+  console.log(myVar.toExponential()); // compiler error: impossible for myVar to be a number
+}
+
+But if the variable gets its value from something other than a constant (like the return value of a function),
+the type guard can't tell what the value of the variable will be.
+In that case, it will narrow the variable's type and only allow it to access to members that match that type.
+
+var myVar: string | number = returnNumberOrString();
+if (typeof myVar == "string"){
+  console.log(myVar.CharAr(0)); // can only access string methods
+}
+else {
+  console.log(myVar.toExponential()); // can only access number methods
+}

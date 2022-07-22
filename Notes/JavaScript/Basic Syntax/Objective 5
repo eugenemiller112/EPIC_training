@@ -1,0 +1,5 @@
+5. Describe the difference between for-in and for-of loops.
+
+TypeScript's for-in loop can iterate over members of an array or characters in a string.
+It cannot be used to iterate over properties of any arbitrary object.
+The for-in loop works the same way in TypeScript as it does in JavaScript.

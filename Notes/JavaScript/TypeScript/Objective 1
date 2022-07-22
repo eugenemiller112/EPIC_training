@@ -1,0 +1,9 @@
+1. Explain what happens when a TypeScript file is compiled.
+
+As TypeScript is compiled, the language service verifies that the code doesn't have any syntax errors.
+Next, JavaScript code that meets the EMCAScript standard is omitted, along with a .js.map file that allows a debugger to present the original TypeScript code when debugging.
+
+Note: The EMCAScript version used depends on browser target and version.
+For example, if Chrome and IE11 are both targeted and Chrome supports EMCAScript version 6, but IE11 only supports version 5, then EMCAScript version 5 must be the target.
+
+Because TypeScript is compiled into JavaScript and not machine code; the term transpiled is often used instead of compiled.

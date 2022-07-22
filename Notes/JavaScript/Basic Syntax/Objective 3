@@ -1,0 +1,8 @@
+3. Describe the data types in TypeScript and how they compare to their C# counterparts.
+
+TypeScript is a superset of JavaScript, all types from JavaScript are supported in TypeScript.
+TypeScript is also strongly typed like C# and has many similar primitives like Boolean, String, Number, etc.
+New types introduced by TypeScript include:
+- any : a variable that can take on any type, which disables type checking for that variable. (Similar to object in C#)
+- enum : represents one of a predefined set of name numeric (like C#) or string values.
+- void : used for functions that do not return any value (like C#)

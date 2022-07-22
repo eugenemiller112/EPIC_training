@@ -1,0 +1,14 @@
+9. Describe the difference for declaring an enumerated type and how they compare to their C# counterparts.
+
+As in C#, enums are declared using the enum keyword, and declare a list of named numeric values, beginning at 0 and incrementing by 1.
+In TypeScript, non-integer values can be assigned to enum members, and subsequent members will continue to increment by 1 (ex: 1.1, 2.1, ...)
+
+Enum values can be accessed in two ways:
+- enumName.memberName
+- enumName["memberName"]
+
+In addition, TypeScript enums are "indexed", allowing the member name to be accessed using its numeric value: enumName[numericValue]
+
+Enums can also be made constant using the const keyword.
+This makes them more efficient, as the value will directly replace calls to enumName.memberName and enumName["memberName"] in generated JavaScript code.
+The drawback: constant enums do not allow access to member names using numeric values.

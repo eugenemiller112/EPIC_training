@@ -1,0 +1,8 @@
+2. Explain how scoping a variable with let differs from scoping a variable with var and when to use each.
+
+In JavaScript, the keyword var is scoped within the nearest containing function.
+If it is not contained within that construct, the variable is global.
+TypeScript supports a newer keyword, let, which is scoped in the nearest containing block of any kind.
+
+If a variable has been declared with let outside of a block, attempting to redeclare it inside of a block using var will result in a compilation error.
+This is because the two variables share the same scope. (Redeclaring inside the block with let will work.)

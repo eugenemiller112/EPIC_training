@@ -1,0 +1,4 @@
+2. Explain how JavaScript code generated from TypeScript is debugged in the client browser.
+
+Even though the browser is running on JavaScript, the debugging takes place in TypeScript when using the browser's development tools.
+This feature is available because the browser is provided with a .ts file as well as a .js.map file that enables it to map directly from the executing line of JavaScript to the original line of TypeScript.

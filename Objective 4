@@ -1,0 +1,10 @@
+4. Describe the syntax for declaring explicitly and implicitly typed variables, parameters, or function outputs.
+
+Local variables, parameters, and function outputs can all be declared with any data types.
+Only a value matching the data type declared can be assigned to them.
+If no data type is declared when a variable is declared, its type becomes any.
+If a value is assigned to a typeless variable, parameter, or function output as it is being declared, then the variables type will be inferred from the value assigned or returned.
+
+Epic Conventions:
+- For local variables, always infer the type unless an explicit type is required to avoid compile errors.
+- Function parameters and return values should always have an explicit type.

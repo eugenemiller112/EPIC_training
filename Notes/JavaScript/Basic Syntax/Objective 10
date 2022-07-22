@@ -1,0 +1,5 @@
+10. Describe the syntax for union types and when and how you should use them.
+
+Anywhere that a data type is declared, you can declare a union using the pipe character (|) between types.
+Values of any type included in the union are allowed to be assigned to the variable. This affords more safety than that of the any type.
+However, it restricts the methods that the variable can access.

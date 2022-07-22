@@ -1,0 +1,4 @@
+7. Explain what a type-guard is and when you should use one.
+
+When typeof and instanceof keyword is used within an if statement, the TypeScript compiler will automatically perform any needed type assertion on the checked variable within the code block following the if statement.
+This provides a simple method of avoiding incorrect type assertions.

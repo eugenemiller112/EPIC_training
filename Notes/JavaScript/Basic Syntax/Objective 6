@@ -1,0 +1,10 @@
+6. Describe the difference between an illegal type assertion and an incorrect type assertion.
+
+A type assertion is illegal if the source type is not assignable to the target type.
+For example, a number can't be assigned to a string.
+Illegal assertions cause compile-time errors.
+
+A type assertion is incorrect if it is legal based on the data types of the variables (as far as the compiler can tell), but doesn't make sense given the value in the source variable at run time.
+For this reason, an incorrect assertion can only be discovered during run-time, when properties of the incorrect type are accessed.
+For example, asserting that any variable is a string is legal, so the compiler won't stop you, but if the value is not a string at run time, the assertion become incorrect.
+This may result in TypeError if a string only method, such as split, as accessed.
